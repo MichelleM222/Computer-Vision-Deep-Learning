@@ -9,7 +9,11 @@ Proyecto de practica con OpenCV para captura de video, mascaras por color, borde
 - Sistema operativo con soporte para ventanas de OpenCV
 
 ## Instalacion del proyecto
+## Project Preview
 
+This project demonstrates an AI-powered computer vision system for object detection and image classification.
+
+![AI Object Detection](./captura_objeto.png)
 ### 1. Clonar el repositorio
 
 ```bash

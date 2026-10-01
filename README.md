@@ -1,136 +1,72 @@
-# Computer Vision & Deep Learning
+# Vision Artificial - Primera Sesion
 
-### Image Classification Using CNNs, Transfer Learning, and Deep Learning Architectures
+Proyecto de practica con OpenCV para captura de video, mascaras por color, bordes Canny, operaciones morfologicas y deteccion de poligonos en tiempo real.
 
-A Computer Vision project focused on image classification and object recognition using deep learning architectures, transfer learning, and real-time prediction with Python.
+## Requisitos
 
-The project explores different neural network approaches to identify and classify images of playing cards, comparing custom CNN architectures with pre-trained models.
+- Python 3.10 o superior
+- Camara web disponible
+- Sistema operativo con soporte para ventanas de OpenCV
 
-## Project Overview
+## Instalacion del proyecto
 
-This project explores the application of Artificial Intelligence and Computer Vision techniques for image classification.
-
-Multiple deep learning architectures were implemented and evaluated, including custom Convolutional Neural Networks (CNNs), transfer learning models, and transformer-based architectures.
-
-The project also includes a real-time prediction component using a webcam and computer vision techniques.
-
-## Objectives
-
-- Develop image classification models using Deep Learning.
-- Compare custom CNN architectures with pre-trained models.
-- Apply Transfer Learning and Fine-Tuning techniques.
-- Explore Transformer-based architectures for computer vision.
-- Implement real-time image recognition using a webcam.
-- Analyze model predictions and classification performance.
-
-## Technologies Used
-
-- Python
-- TensorFlow / Keras
-- PyTorch
-- OpenCV
-- NumPy
-- Matplotlib
-- Computer Vision
-- Deep Learning
-- Transfer Learning
-
-## Models Implemented
-
-### Custom CNN
-Development of a custom convolutional neural network architecture for image classification.
-
-### Transfer Learning
-
-Pre-trained architectures explored:
-
-- MobileNetV2
-- ResNet50
-- VGG16
-- Swin Transformer
-
-### Fine-Tuning
-
-Fine-tuning experiments were conducted to adapt pre-trained models to the image classification task.
-
-## Project Structure
-
-```text
-Computer-Vision-Deep-Learning/
-│
-├── images/
-├── models/
-│
-├── captura_objeto.jpg
-├── captura_cartas.py
-├── CNN_arquitectura_propia.py
-├── create_dataset.py
-├── MobileNetV2_transfer_learning.py
-├── MobileNetV2_fine_tuning.py
-├── ResNet50_transfer_learning.py
-├── ResNet50_fine_tuning.py
-├── VGG16_transfer_learning.py
-├── VGG16_fine_tuning.py
-├── SwinTiny_transfer_learning.py
-├── SwinTiny_fine_tuning.py
-├── ModeloCNNPreentrenadoFactory.py
-├── ModeloTransformerTimmFactory.py
-├── 9_prediccion_tiempo_real.py
-├── requirements.txt
-└── README.md
-```
-
-## Real-Time Prediction
-
-The project includes a real-time prediction script that uses a webcam to capture images and perform classification using trained deep learning models.
-
-The implementation integrates:
-
-- Webcam image capture.
-- Image preprocessing.
-- Deep learning inference.
-- Classification output.
-
-## Installation
-
-Clone the repository:
+### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/MichelleM22/Computer-Vision-Deep-Learning.git
+git clone <url-del-repositorio>
+cd primera_sesion
 ```
 
-Navigate to the project directory:
+### 2. Crear entorno virtual
+
+En Windows (PowerShell):
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+En Linux/macOS:
 
 ```bash
-cd Computer-Vision-Deep-Learning
+python3 -m venv venv
+source venv/bin/activate
 ```
 
-Install the dependencies:
+### 3. Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Execution
+## Ejecucion de scripts
 
-To run the real-time prediction module:
+Ejecuta cualquiera de los siguientes archivos:
 
 ```bash
-python 9_prediccion_tiempo_real.py
+python 4_capturaVideo.py
+python 5_calculadora_mascaras_rgb.py
+python 6_calculadora_canny.py
+python 7_calculadora_canny_erosion.py
+python 8_deteccion_poligonos.py
 ```
 
-Other scripts can be executed individually to explore the different model architectures and training approaches.
+## Contenido del proyecto
 
-## Applications
+- `4_capturaVideo.py`: Visualizacion de la camara en mosaico (BGR, grises, HSV y CIE Lab).
+- `5_calculadora_mascaras_rgb.py`: Calculadora interactiva de mascaras en BGR, HSV o CIE Lab.
+- `6_calculadora_canny.py`: Ajuste de umbrales y suavizado para deteccion de bordes Canny.
+- `7_calculadora_canny_erosion.py`: Canny con operaciones morfologicas y selector de modo.
+- `8_deteccion_poligonos.py`: Deteccion y clasificacion de poligonos sobre la imagen capturada.
 
-Computer Vision techniques can be applied to:
+## Controles generales
 
-- Automated image recognition.
-- Object classification.
-- Visual inspection systems.
-- Intelligent image processing.
-- Real-time recognition applications.
+- En la mayoria de scripts se usa `q` para salir.
+- En algunos scripts se usa `ESC` para salir.
+- Ajusta los trackbars en cada ventana para modificar parametros en tiempo real.
 
-## Limitations
+## Solucion de problemas
 
-This project represents an academic exploration of
+- Si aparece error de camara, verifica que no este en uso por otra aplicacion.
+- Si OpenCV no abre ventanas, revisa permisos de acceso a camara y entorno grafico.
+- Si `pip` no reconoce comandos, activa primero el entorno virtual.
